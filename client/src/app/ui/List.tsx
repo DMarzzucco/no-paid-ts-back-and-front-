@@ -2,12 +2,8 @@ import { ListUsers, NoDataRecord } from "./components/ui.compst";
 import { GetAllResponse } from "../server/services/api.service";
 
 export async function ShowUsers() {
-    // ASP.NET and SpringBoot
+    
     const users = await GetAllResponse()    
-
-    // Express Response
-    // const response = await GetAllResponse()
-    // const users = response.data 
 
     return (
         <div className=" flex justify-center items-center pt-5 w-full px-2 my-1 rounded-lg">

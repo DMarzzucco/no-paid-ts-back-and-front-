@@ -4,53 +4,34 @@
 
 This is an example of how the Death Time middleware works.
 
-## Before Installation
+## Router configure (build a .env.local and paste this)
 
-Before continuing you will need an API to test DeathTime and configure ```src/app/ui/List.tsx``` 
-
-## Router configure
 
 `` .env.local ``
 
 ```
 # <<-APIs REST->>
 
-# Express 
-# <------>
-# Local
-# NEXT_PUBLIC_SERVICE_URL="http://localhost:3001/api"
-#----------------------------------
-# ASP.NET
-# <------>
-# Local
-# NEXT_PUBLIC_SERVICE_URL="http://localhost:5024/api"
-#----------------------------------
-# JAVA.SpringBoot
-# <------>
-# Local
 # NEXT_PUBLIC_SERVICE_URL="http://localhost:8080/api"
 
 ```
 
 ## Requirements
 
+[Docker](https://docs.docker.com/desktop) 
 [Nodejs](https://nodejs.org/en/download/package-manager)
-
-### DeathTime-API
-
-[.NET-API](https://github.com/DMarzzucco/DeathTime.ASP.NET.git)
-
-[Express-API](https://github.com/DMarzzucco/DeathTime.Express-API.git)
-
-[SpringBoot-API](https://github.com/DMarzzucco/DeathTimewithSpringBoot.git)
 
 ## Intallation
 
 ```bash 
 
+# start server with db
+$ docker-compose up db server
+
 # Start client
 $ npm install
 $ npm run dev
+
 ``` 
 
 ## Port

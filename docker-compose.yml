@@ -19,7 +19,7 @@ services:
   server:
     build:
       context: .
-      dockerfile: servers/spring/Dockerfile
+      dockerfile: servers/Dockerfile
     container_name: app_service
     restart: always
     environment:
@@ -31,25 +31,7 @@ services:
       - "8080:8080"
     depends_on:
       - db
-
-#ASP.NET
-  # server:
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #     - ASPNETCORE_HTTP_PORTS=8080
-  #     - ASPNETCORE_HTTPS_PORTS=8080
-  #   container_name: death_time.net
-  #   image: ${DOCKER_REGISTRY-}d_t_source
-  #   build:
-  #     context: .
-  #     dockerfile: servers/asp_net/D_T_Source/Dockerfile
-  #   ports:
-  #     - "8080:8080"
-  #   networks:
-  #     - compose-bridge
-  #   depends_on:
-  #     - db
-
+      
   client:
     build: ./client
     ports:

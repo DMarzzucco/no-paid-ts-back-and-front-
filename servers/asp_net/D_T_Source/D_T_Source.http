@@ -1,6 +1,0 @@
-@D_T_Source_HostAddress = http://localhost:5058
-
-GET {{D_T_Source_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
